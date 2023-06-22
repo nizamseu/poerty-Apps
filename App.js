@@ -9,48 +9,51 @@ import Icon from "react-native-vector-icons/AntDesign";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import { NativeWindStyleSheet } from "nativewind";
 import DetailsScreen from "./src/Component/DetailsScreen/DetailsScreen";
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+function HomeNav() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Icon name="home" size={30} color="black" />
+          ),
+          tabBarLabel: "হোম",
+        }}
+      />
+
+      <Tab.Screen
+        name="Details"
+        component={Details}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FeatherIcon name="book-open" size={30} color="black" />
+          ),
+          tabBarLabel: "কবিতা",
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
 
 export default function App() {
   NativeWindStyleSheet.setOutput({
     default: "native",
   });
 
-  const Tab = createBottomTabNavigator();
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator> */}
-      {/* 
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Details" component={Details} />
-      </Tab.Navigator> */}
-
-      <Tab.Navigator>
-        <Tab.Screen
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          options={{ headerShown: false }}
           name="Home"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <Icon name="home" size={30} color="black" />
-            ),
-            tabBarLabel: "হোম",
-          }}
+          component={HomeNav}
         />
-
-        <Tab.Screen
-          name="Details"
-          component={Details}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <FeatherIcon name="book-open" size={30} color="black" />
-            ),
-            tabBarLabel: "কবিতা",
-          }}
-        />
-      </Tab.Navigator>
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
