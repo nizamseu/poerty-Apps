@@ -13,23 +13,23 @@ export default function HomeScreen({ navigation }) {
         style={[styles.card, styles.shadow]}
         onPress={handleCardPress}
       >
-        <Icon name="rocket" size={30} color="#FF9EAA" />
+        <Icon name="newspaper-o" size={30} color="#FF9EAA" />
         <Text style={[styles.spacing]}>ছড়া</Text>
       </TouchableOpacity>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="user" size={30} color="#40128B" />
+        <Icon name="envira" size={30} color="#40128B" />
         <Text style={[styles.spacing]}>কবিতা </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="heart" size={30} color="#9336B4" />
+        <Icon name="pied-piper" size={30} color="#9336B4" />
         <Text style={[styles.spacing]}>ছোট গল্প </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="moon" size={30} color="#DD58D6" />
+        <Icon name="modx" size={30} color="#DD58D6" />
         <Text style={[styles.spacing]}>গদ্য </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="paper" size={30} color="#3AA6B9" />
+        <Icon name="play" size={30} color="#3AA6B9" />
         <Text style={[styles.spacing]}>গীতি কবিতা </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
