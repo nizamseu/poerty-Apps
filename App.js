@@ -8,14 +8,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/AntDesign";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import { NativeWindStyleSheet } from "nativewind";
-import DetailsScreen from "./src/Component/DetailsScreen/DetailsScreen";
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
 function HomeNav() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Home"
+        name="Home "
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }) => (
