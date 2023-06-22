@@ -13,28 +13,28 @@ export default function HomeScreen({ navigation }) {
         style={[styles.card, styles.shadow]}
         onPress={handleCardPress}
       >
-        <Icon name="rocket" size={30} color="#900" />
-        <Text>ছড়া</Text>
+        <Icon name="rocket" size={30} color="#FF9EAA" />
+        <Text style={[styles.spacing]}>ছড়া</Text>
       </TouchableOpacity>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="user" size={30} color="#900" />
-        <Text>কবিতা </Text>
+        <Icon name="user" size={30} color="#40128B" />
+        <Text style={[styles.spacing]}>কবিতা </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="heart" size={30} color="#900" />
-        <Text>ছোট গল্প </Text>
+        <Icon name="heart" size={30} color="#9336B4" />
+        <Text style={[styles.spacing]}>ছোট গল্প </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="star" size={30} color="#900" />
-        <Text>গদ্য </Text>
+        <Icon name="moon" size={30} color="#DD58D6" />
+        <Text style={[styles.spacing]}>গদ্য </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="user" size={30} color="#900" />
-        <Text>গীতি কবিতা </Text>
+        <Icon name="paper" size={30} color="#3AA6B9" />
+        <Text style={[styles.spacing]}>গীতি কবিতা </Text>
       </View>
       <View style={[styles.card, styles.shadow]}>
-        <Icon name="calendar" size={30} color="#900" />
-        <Text>প্রবন্ধ</Text>
+        <Icon name="book" size={30} color="#E966A0" />
+        <Text style={[styles.spacing]}>প্রবন্ধ</Text>
       </View>
       <PoetryBanner />
     </View>
@@ -64,5 +64,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
+  },
+  spacing: {
+    marginVertical: "15px",
   },
 });
