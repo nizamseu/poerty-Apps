@@ -16,10 +16,13 @@ export default function HomeScreen({ navigation }) {
         <Icon name="newspaper-o" size={30} color="#FF9EAA" />
         <Text style={[styles.spacing]}>ছড়া</Text>
       </TouchableOpacity>
-      <View style={[styles.card, styles.shadow]}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Test")}
+        style={[styles.card, styles.shadow]}
+      >
         <Icon name="envira" size={30} color="#40128B" />
         <Text style={[styles.spacing]}>কবিতা </Text>
-      </View>
+      </TouchableOpacity>
       <View style={[styles.card, styles.shadow]}>
         <Icon name="pied-piper" size={30} color="#9336B4" />
         <Text style={[styles.spacing]}>ছোট গল্প </Text>

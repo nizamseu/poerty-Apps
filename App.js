@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/AntDesign";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import { NativeWindStyleSheet } from "nativewind";
+import Test from "./src/Component/Test";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -54,6 +55,7 @@ export default function App() {
           component={HomeNav}
         />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Test" component={Test} />
       </Stack.Navigator>
     </NavigationContainer>
   );
